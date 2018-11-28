@@ -1,0 +1,257 @@
+\documentclass[a4paper,12pt]{article}
+%packages
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{tabu}
+\usepackage{listings}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{sidecap}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subfiles}
+\usepackage{newclude}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[margin=2cm]{geometry}
+\usepackage[nottoc]{tocbibind} %Adds "References", "List..." to the table of contents
+\usepackage[toc,page]{appendix} %For appendix
+
+%Counter
+\newcommand{\quickwordcount}[1]{Word Count: %
+  \immediate\write18{texcount -1 -sum -merge #1.tex > #1-words.sum 
+  }%
+  \input{#1-words.sum} words%
+}
+
+%Style for Appendix A
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{RGB}{245,245,245}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+%Style for hyperlink
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+    }
+
+%
+%Begin of the document
+%
+
+\begin{document}
+    \begin{titlepage} %First, title page.
+        \title{REASD and STQA Combined Assignment}
+        
+        \author
+        {Author: Klaudia Pawelek\\ 
+        klaudia.pawelek@cranfield.ac.uk \\
+        Module leader: Dr. Salvatore Filippone\\
+        Cranfield University}
+        
+        \date {\today}
+        
+        \maketitle
+        \begin{center}
+        \quickwordcount{main}
+        \end{center}
+        \noindent\rule{\textwidth}{0.4pt} 
+        
+        \begin{abstract}
+        	
+        \end{abstract}
+        \noindent\rule{\textwidth}{0.4pt} 
+    \end{titlepage}
+    
+    %
+    % Contents
+    %
+    
+    \newpage
+    \tableofcontents
+    \newpage
+    \listoffigures
+    \listoftables
+    
+    %
+    % Sections, chapters...
+    %
+
+    \newpage
+    \section{Introduction}
+    
+    \newpage
+    \section{Requirement Analysis}
+        \subsection{Requirements}
+        \qquad The requirements are descriptions of what system shall do, which services it provides and which constraints it includes. Very important part of software design is analyzing and documenting these requirements (it is called requirements engineering) \cite{softwareEngineeringBook}.
+        
+        Requirements can be described on high-level abstraction, very general or more detailed. So it is possible to defined following type of requirements: 
+        \begin{enumerate}
+            \item User requirements, which are described in natural language in general way.
+            \item System requirements, which described in more detailed way functions, services, constraints. These information are important for software engineers and they can help during implementation. System requirements are based on user requirements.
+        \end{enumerate}
+        However, system requirements can be divided into two sub-types:
+        \begin{enumerate}
+            \item Functional requirements - what system shall do, how the system should react and also what system shall not do \cite{functionalReq}.
+            \item Non-functional requirements - more critical and complicated than functional requirements like: performance, security, response time etc. \cite{nonfunctionalReq}.
+        \end{enumerate}
+        In the next subsection, functional and non-functional requirements of simulator have been described.
+        
+        
+            \subsubsection{Functional} %Functional requirements
+            \qquad Functional requirements for simulator for supercomputer.
+                \begin{enumerate}
+                    \item The simulator shall compute:
+                        \begin{enumerate}
+                            \item the number of jobs processed in each queue (throughput) per week,
+                            \item the actual number of machine-hours consumed by user's job,
+                            \item the utilization ratio (number of machine-hours consumed divided by number of machine-ours available),
+                            \item the resulting price paid by the users,
+                            \item the average wait time in each queue,
+                            \item the avarage turnarond time ratio, i.e. the time from placing the job request to completion of the job divided by the actual runtme of the job,
+                            \item the economic balance of the centre, calculated by subtracting from the actual price the operating costs.
+                        \end{enumerate}
+                        \item User shall define parameters in the console:
+                            \begin{enumerate}
+                                \item the number of simulated computer user,
+                                \item the user distribution in classes,
+                                \item the user budgets.
+                            \end{enumerate}
+                        \item User shall read the results in the console.
+                        \item Program shall read the parameters from text file, which has been created by user.
+                        \item Program shall save the results into the text file, which has been created by user.
+                        \item The batch system shall match job request to resources.
+                        \item The job queues shall be maintained by scheduler.
+                        \item The scheduler shall decide about ordering of jobs.
+                        \item The scheduler shall have interface.
+                        \item The entire system shall not be real system for managing a supercomputer.
+                \end{enumerate}
+            
+            \subsubsection{Non-functional} %Non-functional requirements
+            \begin{enumerate}
+                    \item 
+                \end{enumerate}
+                
+                
+        \subsection{UML diagrams}
+            \subsubsection{Use case diagrams}
+            \subsubsection{Structured model}
+            \subsubsection{Behavioural model}
+            \subsubsection{Data flow model}
+        \subsection{Conclusion}    
+    
+    \newpage
+    \section{Implementation}
+        \subsection{General design}
+        \subsection{Class diagram}
+        \subsection{Conclusion}
+    
+    \newpage
+    \section{Software Testing and Quality Assurance}
+        \subsection{Test plan}
+        \subsection{Low level unit tests}
+        \subsection{Integration tests}
+        \subsection{Test coverage}
+        \subsection{Quality matrices}
+        \subsection{Conclusion}
+    
+    \newpage
+    \section{General conclusion}
+    
+    \newpage
+    \begin{thebibliography}{9} 
+ 
+         \bibitem{softwareEngineeringBook} 
+         Ian Sommerville.
+         \textit{Software Engineering, ninth edition}. 
+         Boston [etc.]: Pearson, 2011.
+         
+         \bibitem{functionalReq} 
+         Ian Sommerville.
+         \textit{Software Engineering, ninth edition}. 
+         Boston [etc.]: Pearson, 2011.\newline
+         Chapter 4, pages: 84-87
+         
+         \bibitem{nonfunctionalReq} 
+         Ian Sommerville.
+         \textit{Software Engineering, ninth edition}. 
+         Boston [etc.]: Pearson, 2011.\newline
+         Chapter 4, pages: 87-91
+         
+         
+    \end{thebibliography}     
+    
+    %   
+    % Appendix
+    %
+    
+    \newpage
+    \begin{appendices}
+        \addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+        \makeatletter
+        \addtocontents{toc}{%
+        \begingroup
+        \let\protect\l@section\protect\l@section
+        \let\protect\l@subsection\protect\l@subsection }%
+        \makeatother
+        
+        \section{Code}
+        
+        \section{Environment and tools}
+        
+        Language: C++ and report: \LaTeX.
+        \newline \newline
+        Application has been created and tested on following systems:
+        \begin{enumerate}
+            \item Windows 10 (64-bit),
+            \item Intel's processor,
+            \item Crescent supercomputer.
+        \end{enumerate}
+        List of tools, which have been used to create project and documentation:
+        \begin{enumerate}
+            \item Visual Studio 2017 Enterprise edition,
+            \item GitHub \href{https://github.com/KlaudiaPawelek/SimulationToolForSupercomputer.git}{Repository},
+            \item GitExtension 2.51.05 and kdiff tools 0.9.98-2,
+            \item StarUML 3.0.2,
+            \item Overleaf v2 for LaTeX (www.overleaf.com).
+        \end{enumerate}
+        
+        \section{How to run a program}
+        
+        \section{Further operations for system}
+        
+    \end{appendices}
+
+\end{document}
