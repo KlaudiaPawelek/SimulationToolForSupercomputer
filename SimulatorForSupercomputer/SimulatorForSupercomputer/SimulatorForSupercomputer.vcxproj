@@ -151,16 +151,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ITmemeber.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Researcher.h" />
+    <ClInclude Include="Scheduler.h" />
+    <ClInclude Include="SimulatedComputerSystem.h" />
+    <ClInclude Include="SimulatedUser.h" />
+    <ClInclude Include="SimulationTool.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ITmemeber.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Researcher.cpp" />
+    <ClCompile Include="Scheduler.cpp" />
+    <ClCompile Include="SimulatedComputerSystem.cpp" />
+    <ClCompile Include="SimulatedUser.cpp" />
+    <ClCompile Include="SimulationTool.cpp" />
     <ClCompile Include="SimulatorForSupercomputer.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,12 +18,54 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scheduler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulatedUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ITmemeber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Researcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulatedComputerSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationTool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimulatorForSupercomputer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scheduler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatedUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ITmemeber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Researcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatedComputerSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulationTool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
