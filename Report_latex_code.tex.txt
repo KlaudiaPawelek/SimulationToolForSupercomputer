@@ -124,14 +124,13 @@
         \end{enumerate}
         However, system requirements can be divided into two sub-types:
         \begin{enumerate}
-            \item Functional requirements - what system shall do, how the system should react and also what system shall not do \cite{functionalReq}.
-            \item Non-functional requirements - more critical and complicated than functional requirements like: performance, security, response time etc. \cite{nonfunctionalReq}.
+            \item Functional requirements - what system shall do, how system shall react and also what system shall not do \cite{functionalReq}.
+            \item Non-functional requirements - more critical and sometimes complicated than functional requirements. Their include: performance, security, response time etc. \cite{nonfunctionalReq}.
         \end{enumerate}
-        In the next subsection, functional and non-functional requirements of simulator have been described.
-        
+        In the next subsection, functional and non-functional requirements of simulator have been described. Unfortunately, sometimes division user requirements into functional and non-functional requirements is not clear-cut.
         
             \subsubsection{Functional} %Functional requirements
-            \qquad Functional requirements for simulator for supercomputer.
+            \qquad Functional requirements of system.
                 \begin{enumerate}
                     \item The simulator shall compute:
                         \begin{enumerate}
@@ -150,8 +149,8 @@
                                 \item the user budgets.
                             \end{enumerate}
                         \item User shall read the results in the console.
-                        \item Program shall read the parameters from text file, which has been created by user.
-                        \item Program shall save the results into the text file, which has been created by user.
+                        \item The simulator shall read the parameters from text file, which has been created by user.
+                        \item The simulator shall save the results into the text file, which has been created by user.
                         \item The batch system shall match job request to resources.
                         \item The job queues shall be maintained by scheduler.
                         \item The scheduler shall decide about ordering of jobs.
@@ -160,16 +159,104 @@
                 \end{enumerate}
             
             \subsubsection{Non-functional} %Non-functional requirements
+            \qquad Non-functional requirements of system.
             \begin{enumerate}
-                    \item 
+                    \item The simulator shall be built using C++ programming language.
+                    \item The code shall be compiled and executed on Crescent.
+                    \item The code shall be compiled and executed on Windows system.
+                    \item The simulated computing system shall contain a different type of nodes like: 
+                        \begin{enumerate}
+                            \item traditional,
+                            \item accelerated,
+                            \item specialized.
+                        \end{enumerate}
+                    \item The simulated computing system shall contain a set of storage devices.
+                    \item The simulated computing system shall include at least 16 processor cores per node.
+                    \item The simulated user shall be classified into three different group:       \begin{enumerate}
+                        \item IT support,
+                        \item researchers,
+                        \item students.
+                    \end{enumerate}
+                    \item Each simulated user shall have budget.
+                    \item Each simulated user shall be producer of request.
+                    \item Each simulated user shall produce requests up to budget.
+                    \item Constraints concern Researcher's group:
+                        \begin{enumerate}
+                            \item They shall be divided into group, which depends on research theme.
+                            \item Each member has an allocation of resources.
+                            \item Individual researcher shall have an additional resource usage.
+                        \end{enumerate}
+                    \item Constraints concern Students:
+                        \begin{enumerate}
+                            \item The students shall be grouped by the curriculum.
+                            \item The students shall have a cap on the maximum usable resources.
+                            \item The usage shall be cumulative in students group.
+                        \end{enumerate}
+                    \item The jobs shall be divided into four groups depend on uses: 
+                        \begin{enumerate}
+                            \item short,
+                            \item small,
+                            \item long running,
+                            \item interactive.
+                        \end{enumerate}
+                    \item The scheduler shall be based on rule: first-come first-served.
+                    \item The interface mechanism shall be designed to allow other types of scheduler.
+                    \item The scheduler shall maintain job queues.
+                    \item The simulated computing system shall have four different types of job queues.
+                        \begin{enumerate}
+                            \item The short job shall take up 2 nodes for no more than 1 hours and 10\% resources must be reserved for this job queue.
+                            \item The medium-sized job shall take up to 10\% of total numbers of cores and can last up to 8 hours. 30\% resources shall be reserved for this job queues.
+                            \item The large job shall take up to 16 hours and take up 50\% of resources of the total core count.
+                            \item The huge job shall be active only from 5 p.m. Friday to 9 p.m. Monday. Entire resources shall be reserved for this type of job queue. Only huge job queue shall be executed during the weekend.
+                        \end{enumerate}
+                    \item Each job queue shall be associated a cost for number of machine-hours.
+                    \item Each job shall be requested a certain number of processor cores for a certain amount of time.
+                    \item The cost per hour shall be constant.
+                    \item The time between two successive job requests and the size of the request shall be modelled by an exponential probability distribution with parameters dependent on the class of user.
                 \end{enumerate}
                 
                 
         \subsection{UML diagrams}
-            \subsubsection{Use case diagrams}
-            \subsubsection{Structured model}
-            \subsubsection{Behavioural model}
-            \subsubsection{Data flow model}
+        \qquad The Unified Modeling Language (UML) is a modelling language using in software engineering to visualize the design of the given system \cite{uml}. It is helpful in communication in company organization and business processes. Version 2.0 of UML includes two main types of diagrams: structural and behavioural.
+        Additionally, every type includes several individual and original diagrams. Division has been presented below (based on UML 2.0:in a nutshell \cite{uml}).
+        \begin{enumerate}
+            \item Structural diagrams:
+            \begin{enumerate}
+                \item class diagrams,
+                \item component diagrams,
+                \item composite structure diagrams,
+                \item deployment diagrams,
+                \item package diagrams,
+                \item object diagrams.
+            \end{enumerate}
+            \item Behavioral diagrams:
+            \begin{enumerate}
+                \item activity diagrams,
+                \item communication diagrams,
+                \item interaction diagrams,
+                \item sequence diagrams,
+                \item state machine diagrams,
+                \item timing diagrams,
+                \item use case diagrams.
+            \end{enumerate}
+        \end{enumerate}
+        
+        Some types of diagrams have been presented in next chapters: \ref{structured} and \ref{behavioural} for designed simulator.
+        
+        
+            \subsubsection{Structured models} \label{structured}
+            \qquad The structured models are used to present physical organization in your software. For example, it can be relations between objects.
+            
+            \textbf{Class diagram}
+            
+            \subsubsection{Behavioural models} \label{behavioural}
+            \qquad The behavioural models are used to present actions or behavior of elements. They can be helpful to capture requirements.
+            
+            \textbf{Use case diagram}
+        
+        \subsection{Data flow model} \label{data}
+        \qquad The Data Flow Diagram (DFD) shows, how data moves in system without details and which kind of data is used. Data flow diagrams are not supported by UML. \cite{models}
+            
         \subsection{Conclusion}    
     
     \newpage
@@ -209,6 +296,26 @@
          \textit{Software Engineering, ninth edition}. 
          Boston [etc.]: Pearson, 2011.\newline
          Chapter 4, pages: 87-91
+         
+         \bibitem{uml} %about uml
+         Dan Pilone.
+         \textit{UML 2.0 : in a nutshell.}
+         Sebastopol, CA : O'Reilly, 2005. \newline
+         
+        \bibitem{umlClassdiagram} %about class diagram
+         Dan Pilone.
+         \textit{UML 2.0 : in a nutshell.}
+         Sebastopol, CA : O'Reilly, 2005. \newline
+         Chapter 2, pages: 11-28.
+         
+         \bibitem{models}  %about models
+         Ian Sommerville.
+         \textit{Software Engineering, ninth edition}. 
+         Boston [etc.]: Pearson, 2011.\newline
+         Chapter 5, pages: 118-138
+         
+         
+
          
          
     \end{thebibliography}     

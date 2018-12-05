@@ -1,7 +1,5 @@
 #pragma once
-#include "SimulatedUser.h"
-class Researcher :
-	public SimulatedUser
+class Researcher
 {
 public:
 	Researcher();
