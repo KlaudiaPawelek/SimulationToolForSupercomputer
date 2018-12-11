@@ -6,6 +6,8 @@
 #include "Users.h"
 #include <vector>
 #include <iterator>
+#include <iostream>
+#include <random>
 
 using namespace std;
 
@@ -22,6 +24,7 @@ public:
 	void DeleteJobFromQueue(Queue &queue, Users &users);
 	vector<Queue> *GetQueue();
 	int AmountOfJob(Queue::TypeOfJobQueue typOfJobQueue);
+	
 };
 
 #endif

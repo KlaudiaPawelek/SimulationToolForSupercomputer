@@ -7,12 +7,13 @@ Job::Job()
 
 }
 
-Job::Job(TypeOfJob type)
+Job::Job(TypeOfJob type, int time)
 {
 	this->type = type;
 	this->jobID = CreateID();
 	this->inQueue = false;
 	this->done = false;
+	this->time = time;
 }
 
 

@@ -41,7 +41,7 @@ void Scheduler::GetNewJobs(Users &users)
 
 void Scheduler::PutJobIntoQueue(Job &job)
 {
-	if (job.type == Job::small)
+	if (job.type == Job::_small)
 	{
 		job.inQueue = true;
 		(*this->queue)[0].queue.push_back(job);
@@ -84,6 +84,8 @@ int Scheduler::AmountOfJob(Queue::TypeOfJobQueue typOfJobQueue)
 
 	return amount;
 }
+
+
 
 
 

@@ -19,7 +19,7 @@ public:
 	~Student();
 
 	int GetNumbersOfJobs();
-	void CreateJob(int amount);
+	void CreateJob(int amount, int time);
 	Job &GetJob(int i);
 	void SetStatusOfJob(Job &job, bool inQueue, bool isDone);
 

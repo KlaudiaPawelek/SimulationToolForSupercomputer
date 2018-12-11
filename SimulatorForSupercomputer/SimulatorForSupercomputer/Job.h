@@ -10,7 +10,7 @@ class Job
 public:
 	enum TypeOfJob
 	{
-		small = 0,
+		_small = 0,
 		medium = 1,
 		huge = 2,
 	};
@@ -18,9 +18,10 @@ public:
 	int jobID;
 	bool inQueue;
 	bool done;
+	int time;
 public:
 	Job();
-	Job(TypeOfJob type);
+	Job(TypeOfJob type, int time);
 	~Job();
 	int CreateID();
 };

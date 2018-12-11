@@ -4,9 +4,13 @@
 
 SimulationTool::SimulationTool()
 {
+}
+
+SimulationTool::SimulationTool(int amountOfUsers)
+{
 
 	this->system = new ComputingSystem();
-	this->users = new Users();
+	this->users = new Users(amountOfUsers);
 	this->scheduler = new Scheduler();
 }
 
@@ -63,4 +67,29 @@ void SimulationTool::ExecuteJobs()
 bool operator<(const Job & left, const Job & right)
 {
 	return left.jobID < right.jobID;
+}
+
+vector<int> SimulationTool::ExponentialDistributionEngine(int maxJobs, int maxNodes, int jobPerUser)
+{
+	default_random_engine generator;
+	exponential_distribution<double> distribution(1.0);
+	vector<double> p;
+	vector<int> p_short;
+	p.resize(maxJobs);
+	p_short.resize(jobPerUser);
+
+	for (int i = maxJobs - 1; i >=0; i--)
+	{
+		double number = distribution(generator);
+		if (number < 1.0)
+			++p[int(jobPerUser * number)];
+	}
+	
+	for (int i = 1; i <jobPerUser+1; i++)
+	{
+		//cout<<(int)(p[i] * maxNodes / maxJobs);
+		p_short[i-1]= (p[jobPerUser + 1-i] * maxNodes / maxJobs);
+	}
+	
+	return p_short;
 }

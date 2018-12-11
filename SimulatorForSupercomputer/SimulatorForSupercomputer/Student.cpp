@@ -9,8 +9,7 @@ Student::Student()
 
 Student::Student(int id)
 {
-	this->id = id;
-	CreateJob(2);
+	this->id = id; 
 }
 
 Student::~Student()
@@ -22,12 +21,12 @@ int Student::GetNumbersOfJobs()
 	return (*job).size();
 }
 
-void Student::CreateJob(int amount)
+void Student::CreateJob(int amount, int time)
 {
 	(*job).resize(amount);
 	for (int i = 0; i < amount; i++)
 	{
-		(*job)[i] = Job(Job::small);
+		(*job)[i] = Job(Job::_small, time);
 	}
 
 }

@@ -1,4 +1,4 @@
-﻿  SimulationTool.cpp
-c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\simulationtool.cpp(28): warning C4018: '<': signed/unsigned mismatch
-c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\simulationtool.cpp(48): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\main.cpp(48): warning C4552: '+': result of expression not used
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\main.cpp(50): warning C4552: '+': result of expression not used
   SimulatorForSupercomputer.vcxproj -> C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\SimulatorForSupercomputer\Debug\SimulatorForSupercomputer.exe
