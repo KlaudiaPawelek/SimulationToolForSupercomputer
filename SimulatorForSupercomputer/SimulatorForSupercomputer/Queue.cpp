@@ -16,4 +16,7 @@ Queue::Queue(TypeOfJobQueue type)
 
 Queue::~Queue()
 {
+	
 }
+
+

@@ -27,9 +27,9 @@ vector<Job>* Course::GetJobs()
 {
 	for (int i = 0; i < this->student.size(); i++)
 	{
-		for (int j = 0; j < this->student[i].getNumbersOfJobs(); j++)
+		for (int j = 0; j < this->student[i].GetNumbersOfJobs(); j++)
 		{
-			this->jobs.push_back(this->student[i].getJob(j));
+			this->jobs.push_back(this->student[i].GetJob(j));
 		}
 		
 	}

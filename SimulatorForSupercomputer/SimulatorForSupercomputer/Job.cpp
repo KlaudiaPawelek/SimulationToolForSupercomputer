@@ -12,17 +12,15 @@ Job::Job(TypeOfJob type)
 	this->type = type;
 	this->jobID = CreateID();
 	this->inQueue = false;
+	this->done = false;
 }
 
 
 Job::~Job()
 {
+	
 }
 
-void Job::TakeResources()
-{
-	//??
-}
 
 int Job::CreateID()
 {

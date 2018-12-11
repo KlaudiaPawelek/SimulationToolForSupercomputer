@@ -17,7 +17,7 @@ public:
 
 	TypeOfProcessor type;
 	int id;
-	bool engaged;
+	bool busy;
 
 public:
 

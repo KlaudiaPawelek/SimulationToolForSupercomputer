@@ -12,15 +12,16 @@ class Student
 {
 public:
 	int id;
-	vector<Job> job;
+	vector<Job> *job = new vector<Job>;
 public:
 	Student();
 	Student(int id);
 	~Student();
 
-	int getNumbersOfJobs();
+	int GetNumbersOfJobs();
 	void CreateJob(int amount);
-	Job getJob(int i);
+	Job &GetJob(int i);
+	void SetStatusOfJob(Job &job, bool inQueue, bool isDone);
 
 };
 #endif

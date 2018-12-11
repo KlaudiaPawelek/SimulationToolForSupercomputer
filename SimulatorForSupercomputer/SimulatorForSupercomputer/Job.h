@@ -2,7 +2,6 @@
 #define JOB_H
 
 #pragma once
-#include <vector>
 extern int _ID_;
 using namespace std;
 
@@ -18,11 +17,11 @@ public:
 	TypeOfJob type;
 	int jobID;
 	bool inQueue;
+	bool done;
 public:
 	Job();
 	Job(TypeOfJob type);
 	~Job();
-	void TakeResources();
 	int CreateID();
 };
 #endif

@@ -4,7 +4,7 @@
 #pragma once
 #include "Processor.h"
 #include <vector>
-
+extern int _ID_NODE;
 using namespace std;
 
 class Nodes
@@ -18,7 +18,9 @@ public:
 	};
 	TypeOfNode type;
 	static const int amountProcessors = 16;
-	vector<Processor> processors;
+	vector<Processor> *processors = new vector<Processor>;
+	bool busy;
+	int idNode;
 public:
 	/**
 	* Default constructor.
@@ -27,9 +29,11 @@ public:
 	/**
 	* Constructor with type of created node
 	**/
-	Nodes(TypeOfNode type);
-
+	Nodes(TypeOfNode type, bool busy);
 	~Nodes();
+
+	int CreateID();
+	vector<Processor> *getProcessors();
 };
 
 #endif

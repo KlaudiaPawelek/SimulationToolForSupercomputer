@@ -5,19 +5,23 @@
 #include "Queue.h"
 #include "Users.h"
 #include <vector>
+#include <iterator>
 
 using namespace std;
 
 class Scheduler
 {
 public:
-	vector<Queue> queue;
-
+	vector<Queue> *queue = new vector<Queue>;
+	vector<Job> *jobs = new vector<Job>;
 public:
 	Scheduler();
 	~Scheduler();
-	void GetNewJobs(Users users);
+	void GetNewJobs(Users &users);
 	void PutJobIntoQueue(Job &job);
+	void DeleteJobFromQueue(Queue &queue, Users &users);
+	vector<Queue> *GetQueue();
+	int AmountOfJob(Queue::TypeOfJobQueue typOfJobQueue);
 };
 
 #endif

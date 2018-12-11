@@ -24,6 +24,7 @@ public:
 	Queue();
 	Queue(TypeOfJobQueue type);
 	~Queue();
+	
 
 };
 

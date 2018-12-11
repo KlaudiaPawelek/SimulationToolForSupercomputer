@@ -1,2 +1,4 @@
-﻿  Job.cpp
+﻿  SimulationTool.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\simulationtool.cpp(28): warning C4018: '<': signed/unsigned mismatch
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\simulatorforsupercomputer\simulatorforsupercomputer\simulationtool.cpp(48): warning C4018: '<': signed/unsigned mismatch
   SimulatorForSupercomputer.vcxproj -> C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\SimulatorForSupercomputer\Debug\SimulatorForSupercomputer.exe

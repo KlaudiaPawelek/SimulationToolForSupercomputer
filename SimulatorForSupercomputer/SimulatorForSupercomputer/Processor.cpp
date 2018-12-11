@@ -9,7 +9,7 @@ Processor::Processor(TypeOfProcessor type, int id)
 {
 	this->type = type;
 	this->id = id;
-	this->engaged = false;
+	this->busy = false;
 }
 
 
