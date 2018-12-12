@@ -14,7 +14,7 @@ public:
 	vector<Staff> staff;
 public:
 	Users();
-	Users(int amount);
+	Users(int amount, int budget);
 	~Users();
 };
 

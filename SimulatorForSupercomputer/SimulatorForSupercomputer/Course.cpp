@@ -7,7 +7,7 @@ Course::Course()
 
 }
 
-Course::Course(TypeOfCourse typeOfCourse, int numberOfStudents)
+Course::Course(TypeOfCourse typeOfCourse, int numberOfStudents, int budget)
 {
 	this->typeOfCourse = typeOfCourse;
 	this->numberOfStudents = numberOfStudents;
@@ -16,6 +16,7 @@ Course::Course(TypeOfCourse typeOfCourse, int numberOfStudents)
 	{
 		this->student[i] = Student(i);
 	}
+	this->budget = budget;
 }
 
 Course::~Course()

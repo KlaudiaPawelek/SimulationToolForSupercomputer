@@ -8,6 +8,7 @@
 #include <iterator>
 #include <iostream>
 #include <random>
+extern int _CLOCK_;
 
 using namespace std;
 
@@ -24,7 +25,6 @@ public:
 	void DeleteJobFromQueue(Queue &queue, Users &users);
 	vector<Queue> *GetQueue();
 	int AmountOfJob(Queue::TypeOfJobQueue typOfJobQueue);
-	
 };
 
 #endif

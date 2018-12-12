@@ -6,11 +6,11 @@ SimulationTool::SimulationTool()
 {
 }
 
-SimulationTool::SimulationTool(int amountOfUsers)
+SimulationTool::SimulationTool(int amountOfUsers, int budget)
 {
 
 	this->system = new ComputingSystem();
-	this->users = new Users(amountOfUsers);
+	this->users = new Users(amountOfUsers, budget);
 	this->scheduler = new Scheduler();
 }
 
@@ -21,6 +21,7 @@ SimulationTool::~SimulationTool()
 void SimulationTool::RunScheduler()
 {
 	(*this->scheduler).GetNewJobs((*this->users));
+	vector<Queue> *queue = (*this->scheduler).GetQueue();
 }
 
 void SimulationTool::MatchJobToResources() //for small jobs
@@ -35,12 +36,17 @@ void SimulationTool::MatchJobToResources() //for small jobs
 		{
 			for (int j = 0; j < (*this->system).GetAmountOfNodes(Nodes::traditional); j++)
 			{
-				(*this->JobNodes).insert({(*queue)[i].queue[j] , (*nodes)[j]});
+				_CLOCK_ ++;
+				(*queue)[i].queue[j].SetResourceTime(_CLOCK_);
+				SetResourceTime(_CLOCK_);
+				(*this->JobNodes).insert({ (*queue)[i].queue[j] , (*nodes)[j] });
 				(*nodes)[j].busy = true;
+					
 			}
-				
 		}
 	}
+	_CLOCK_++;
+	
 }
 
 void SimulationTool::ExecuteJobs()
@@ -53,11 +59,14 @@ void SimulationTool::ExecuteJobs()
 	{
 		if ((*queue)[i].type == Queue::_short)
 		{
+
 			for (int j = 0; j < (*this->system).GetAmountOfNodes(Nodes::traditional); j++)
 			{
-				(*this->scheduler).DeleteJobFromQueue((*queue)[i],(*this->users));
+				
+				(*this->scheduler).DeleteJobFromQueue((*queue)[i], (*this->users));
 				(*nodes)[j].busy = false;
 				// to do: change values in JobNodes multimap also ;-)
+				
 			}
 
 		}
@@ -67,6 +76,21 @@ void SimulationTool::ExecuteJobs()
 bool operator<(const Job & left, const Job & right)
 {
 	return left.jobID < right.jobID;
+}
+
+void SimulationTool::SetResourceTime(int time)
+{
+	for (int i = 0; i <(*this->users).course.size(); i++)
+	{
+		for (int j = 0; j < (*this->users).course[i].student.size(); j++)
+		{
+			for (int k = 0; k < (*this->users).course[i].student[j].job->size(); k++)
+			{
+
+				(*this->users).course[i].student[j].GetJob(k).SetResourceTime(time);
+			}
+		}
+	}
 }
 
 vector<int> SimulationTool::ExponentialDistributionEngine(int maxJobs, int maxNodes, int jobPerUser)

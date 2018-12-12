@@ -15,15 +15,35 @@ public:
 		huge = 2,
 	};
 	TypeOfJob type;
+//private
 	int jobID;
 	bool inQueue;
 	bool done;
-	int time;
+	int createTime;
+	int putIntoQueueTime;
+	int inQueueTime;
+	int executeTime; 
+	int resourceTime;
 public:
 	Job();
-	Job(TypeOfJob type, int time);
+	Job(TypeOfJob type, int createTime);
 	~Job();
+
 	int CreateID();
+
+	void SetInQueueTime(int inQueueTime);
+	void SetExecuteTime(int executeTime);
+	void SetPutInQueueTime(int putIntoQueueTime);
+	void SetResourceTime(int resourceTime);
+	void SetJobInQueue(bool inQueue);
+	void SetJobIsDone(bool done);
+
+	int GetInQueueTime();
+	int GetExecuteTime();
+	int GetPutInQueueTime();
+	int GetResourceTime();
+	bool GetJobInQueue();
+	bool GetJobIsDone();
 };
 #endif
 

@@ -3,7 +3,7 @@
   <Class Name="SimulationTool" Collapsed="true">
     <Position X="5.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAgAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAgAAACAAAAAACAAAAAAAAAAACAQABAgEAAAAAAAAA=</HashCode>
       <FileName>SimulationTool.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -15,11 +15,10 @@
   <Class Name="ComputingSystem" Collapsed="true">
     <Position X="1.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAIAA=</HashCode>
+      <HashCode>QAgIGAAAAAAAAAAAAACAAAAAAEABAEAAAAACAgAAACA=</HashCode>
       <FileName>ComputingSystem.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="nodes" />
       <Field Name="storage" />
     </ShowAsAssociation>
   </Class>
@@ -33,14 +32,14 @@
   <Class Name="Scheduler" Collapsed="true">
     <Position X="10.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAACAAAkAAAAAAACCAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAAAAAgRAACBAAkCAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Scheduler.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Nodes" Collapsed="true">
     <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAQAAAAAAAAAAAAAAAiAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAkAQAAAAAAAAAAEIAAAiAAAAABAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Nodes.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -49,8 +48,15 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
+    <NestedTypes>
+      <Enum Name="Processor::TypeOfProcessor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Processor.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAABQAAAAAAAAAAEAgA=</HashCode>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAEAgA=</HashCode>
       <FileName>Processor.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,14 +77,21 @@
   <Class Name="Job" Collapsed="true">
     <Position X="10.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAAAAAAAAgAAQAAAAAAAAAAADEAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>BAABAAAAQAAAAAAQAIAAAAAAAAADEAAAAAAAAAAAAAA=</HashCode>
       <FileName>Job.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Course" Collapsed="true">
     <Position X="4" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Course::TypeOfCourse" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Course.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAEAAAIABAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <HashCode>AIAAAEAAAAAAAEAAAIABAABAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Course.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -105,7 +118,7 @@
   <Class Name="Student" Collapsed="true">
     <Position X="4" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAQAAAgAAABBAAAAIAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AADAAAAAQAAAAAAABAAAAAIgAAAAAAAAAAAAAAAAEgA=</HashCode>
       <FileName>Student.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -148,7 +161,7 @@
     <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AUIAEIEqCrBsEEBAAOMIAAAyAAUEQBIAhQkwggAFUkI=</HashCode>
-      <FileName>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\include\vector</FileName>
+      <FileName>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\include\vector</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

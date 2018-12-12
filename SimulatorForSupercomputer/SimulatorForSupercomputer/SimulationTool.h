@@ -9,6 +9,7 @@
 #include <map>
 #include <iterator>
 #include <cmath>
+extern int _CLOCK_;
 
 class SimulationTool
 {
@@ -19,7 +20,7 @@ public:
 	multimap<Job, Nodes> *JobNodes = new multimap<Job,Nodes>;
 public:
 	SimulationTool();
-	SimulationTool(int amountOfUsers);
+	SimulationTool(int amountOfUsers, int budget);
 	~SimulationTool();
 
 	void RunScheduler();
@@ -27,6 +28,7 @@ public:
 	void ExecuteJobs();
 
 	friend bool operator< (const Job &left, const Job &right);
+	 void SetResourceTime(int time);
 	vector<int> ExponentialDistributionEngine(int maxJobs, int maxNodes, int JobPerUser);
 };
 #endif

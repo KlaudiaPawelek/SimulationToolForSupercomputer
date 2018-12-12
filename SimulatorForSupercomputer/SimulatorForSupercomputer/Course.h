@@ -18,11 +18,12 @@ public:
 	};
 	TypeOfCourse typeOfCourse;
 	int numberOfStudents; //in given course
+	int budget;
 	vector<Student> student;
 	vector<Job> jobs;
 public:
 	Course();
-	Course(TypeOfCourse typeOfCourse, int numberOfStudents);
+	Course(TypeOfCourse typeOfCourse, int numberOfStudents, int budget);
 	~Course();
 
 	vector<Job> *GetJobs();

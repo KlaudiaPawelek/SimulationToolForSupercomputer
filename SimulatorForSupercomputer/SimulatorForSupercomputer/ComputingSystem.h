@@ -18,6 +18,9 @@ public:
 	static const int amountTraditionalNodes = 20;
 	static const int amountAcceleratedNodes = 44;
 	static const int amountSpecializedNodes = 64;
+	static const int constantOperationalCostPerHour_Traditional = 0.01;
+	static const int constantOperationalCostPerHour_Accelerated = 0.5;
+	static const int constantOperationalCostPerHour_Specialized = 1;
 	Storage storage;
 public:
 	ComputingSystem();
