@@ -155,7 +155,6 @@
   <ItemGroup>
     <ClInclude Include="..\Project3\ComputingSystem.h" />
     <ClInclude Include="..\Project3\Course.h" />
-    <ClInclude Include="..\Project3\Interface.h" />
     <ClInclude Include="..\Project3\InterfaceScheduler.h" />
     <ClInclude Include="..\Project3\ITmember.h" />
     <ClInclude Include="..\Project3\Job.h" />
@@ -176,7 +175,6 @@
   <ItemGroup>
     <ClCompile Include="..\Project3\ComputingSystem.cpp" />
     <ClCompile Include="..\Project3\Course.cpp" />
-    <ClCompile Include="..\Project3\Interface.cpp" />
     <ClCompile Include="..\Project3\InterfaceScheduler.cpp" />
     <ClCompile Include="..\Project3\ITmember.cpp" />
     <ClCompile Include="..\Project3\Job.cpp" />

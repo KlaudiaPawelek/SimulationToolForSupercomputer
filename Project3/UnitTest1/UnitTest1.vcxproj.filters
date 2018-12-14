@@ -27,9 +27,6 @@
     <ClInclude Include="..\Project3\Course.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Project3\Interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\Project3\InterfaceScheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -84,9 +81,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Project3\Course.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Project3\Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Project3\InterfaceScheduler.cpp">

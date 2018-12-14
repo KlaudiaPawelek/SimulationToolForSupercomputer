@@ -21,7 +21,7 @@ namespace UnitTest1
 		{
 			int id = 10;
 			Student student(id);
-			Assert::AreEqual(id, student.GetId());
+			Assert::AreEqual(id, student.GetStudentId());
 		}
 
 		TEST_METHOD(CreateCourse)
