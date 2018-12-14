@@ -13,8 +13,13 @@
 \usepackage{graphicx}
 \usepackage{sidecap}
 \usepackage{url}
+% table
+\usepackage{booktabs}
+\usepackage{graphicx}
+%
 \usepackage{hyperref}
 \usepackage{subfiles}
+\usepackage{import}
 \usepackage{newclude}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[margin=2cm]{geometry}
@@ -111,55 +116,171 @@
 
     \newpage
     \section{Introduction}
+    \qquad Each supercomputer requires...
+    \newline Simulation tool to model the behaviour of the computing platform, which will be called \textit{simulation tool} in the next chapters. \newline
+    \qquad The report has been divided into three, important, main sections: 
+    \begin{itemize}
+        \item requirement analysis (Chapter \ref{Requirements}),
+        \item implementation (Chapter \ref{Implementation}),
+        \item and software testing/quality assurance (Chapter \ref{STQA}).
+    \end{itemize}
+    \qquad In requirement analysis chapter all requirements have been presented as text and also as diagrams. This is very important part of report, because it includes a lot of detailed information. Each information weights on other part of work like: which functionality should be created by developers. In implementation chapter, the general design of code has been presented: division into classes or used patterns. In software testing/quality assurance chapter, entire documentation concerns testing has been described. However, typical documentation has another form, more practical, less scientific. Standards templates from IEEE are the best example of documentation for requirements or testing. Nevertheless, in this report only some parts from typical documentation has been used, because this report is project for assessment. So this is the reason, why each part is prelude by theory, which normally (in simple project) maybe does not exist.
     
     \newpage
-    \section{Requirement Analysis}
-        \subsection{Requirements}
-        \qquad The requirements are descriptions of what system shall do, which services it provides and which constraints it includes. Very important part of software design is analyzing and documenting these requirements (it is called requirements engineering) \cite{softwareEngineeringBook}.
+    \section{Requirement Analysis} \label{Requirements}
+    \qquad The requirements are description of what system shall do, which services it provides and which constraints it includes. Very important part of software design is analyzing and documenting these requirements (it is called requirements engineering) \cite{softwareEngineeringBook}.
         
-        Requirements can be described on high-level abstraction, very general or more detailed. So it is possible to defined following type of requirements: 
-        \begin{enumerate}
-            \item User requirements, which are described in natural language in general way.
-            \item System requirements, which described in more detailed way functions, services, constraints. These information are important for software engineers and they can help during implementation. System requirements are based on user requirements.
-        \end{enumerate}
-        However, system requirements can be divided into two sub-types:
-        \begin{enumerate}
-            \item Functional requirements - what system shall do, how system shall react and also what system shall not do \cite{functionalReq}.
-            \item Non-functional requirements - more critical and sometimes complicated than functional requirements. Their include: performance, security, response time etc. \cite{nonfunctionalReq}.
-        \end{enumerate}
-        In the next subsection, functional and non-functional requirements of simulator have been described. Unfortunately, sometimes division user requirements into functional and non-functional requirements is not clear-cut.
+    Requirements can be described on high-level abstraction, very general or more detailed. So it is possible to defined following type of requirements: 
+    \begin{enumerate}
+        \item User requirements, which are described in natural language in general way.
+        \item System requirements, which described in more detailed way functions, services, constraints. These information are important for software engineers and they can help during implementation. System requirements are based on user requirements.
+    \end{enumerate}
+    However, system requirements can be divided into two sub-types:
+    \begin{enumerate}
+        \item Functional requirements - what system shall do, how system shall react and also what system shall not do \cite{functionalReq}.
+        \item Non-functional requirements - more critical and sometimes complicated than functional requirements. Their include: performance, security, response time etc. \cite{nonfunctionalReq}.
+    \end{enumerate}
+    In the next subsections, functional and non-functional requirements of simulation tool have been described. Unfortunately, sometimes division user requirements into functional and non-functional requirements is not clear-cut.
+    
+    All requirements have been created based on User Requirements [Appendix \ref{UserRequirements}].
         
-            \subsubsection{Functional} %Functional requirements
-            \qquad Functional requirements of system.
-                \begin{enumerate}
-                    \item The simulator shall compute:
-                        \begin{enumerate}
-                            \item the number of jobs processed in each queue (throughput) per week,
-                            \item the actual number of machine-hours consumed by user's job,
-                            \item the utilization ratio (number of machine-hours consumed divided by number of machine-ours available),
-                            \item the resulting price paid by the users,
-                            \item the average wait time in each queue,
-                            \item the avarage turnarond time ratio, i.e. the time from placing the job request to completion of the job divided by the actual runtme of the job,
-                            \item the economic balance of the centre, calculated by subtracting from the actual price the operating costs.
-                        \end{enumerate}
-                        \item User shall define parameters in the console:
-                            \begin{enumerate}
-                                \item the number of simulated computer user,
-                                \item the user distribution in classes,
-                                \item the user budgets.
-                            \end{enumerate}
-                        \item User shall read the results in the console.
-                        \item The simulator shall read the parameters from text file, which has been created by user.
-                        \item The simulator shall save the results into the text file, which has been created by user.
-                        \item The batch system shall match job request to resources.
-                        \item The job queues shall be maintained by scheduler.
-                        \item The scheduler shall decide about ordering of jobs.
-                        \item The scheduler shall have interface.
-                        \item The entire system shall not be real system for managing a supercomputer.
-                \end{enumerate}
+        \subsection{Functional Requirements} %Functional requirements
+        \qquad Functional requirements are presented are system features with short description at the beginning. Each system feature got priority level: Low, Medim or High.
+        \subsubsection{System Feature 1: information computed by simulation tool} 
+        
+        \textbf{Description and priority}
+        
+        Simulation tool shall compute information important for IT department. These information can be useful for checking behaviour of computing platform. Priority level: High. \newline
+        \textbf{Stimulus/Response Sequences}
+        
+        All use cases and diagrams have been includes in chapter \ref{umlDiagrams}. \newline
+        \textbf{Functional requirements}
+        
+        The simulation tool shall compute:
+        \newline
+
+        \begin{table}[h!]
+            \begin{tabular}{|l|p{10cm}|l|l|}
+            \hline
+            ID   & Description  & Status & Priority \\ \hline
+            REQ1 & The number of jobs processed in each queue (throughput) per week. & Not implemented & Medium   \\
+            REQ2 & The actual number of machine-hours consumed by user's job.& Not implemented & High     \\
+            REQ3 & The utilization ratio (number of machine-hours consumed divided by number of machine-ours available)
+            & Not implemented & High \\
+            REQ4 & The resulting price paid by the users.  & Not implemented & High     \\
+            REQ5 & The average wait time in each queue.  & Not implemented & High     \\
+            REQ6 & The avarage turnarond time ratio, i.e. the time from placing the job request to completion of the job divided by the actual runtme of the job. & Not implemented & High     \\
+            REQ7 & The economic balance of the centre, calculated by subtracting from the actual price the operating costs. & Not implemented & Medium   \\ \hline
+            \end{tabular}
+            \caption{System feature 1: information computed by simulation tool.}
+            \label{feature1}
+        \end{table}
+
+        \newpage
+        \subsubsection{System Feature 2: output information}
+        \textbf{Description and priority}
+        
+        Simulation tool shall display information from System Feature 1 in console for user. Priority level: Medium. \newline
+        \textbf{Stimulus/Response Sequences}
+        
+        All use cases and diagrams have been includes in chapter \ref{umlDiagrams}. \newline
+        \textbf{Functional requirements}  
+        \newline
+        \begin{table}[h!]
+            \begin{tabular}{|l|p{10cm}|p{3cm}|l|}
+                \hline
+                ID   & Description  & Status & Priority \\ \hline
+                REQ8 & The simulation tool shall display in console information from System Feature 1 after executed all jobs from all queues. & Implemented & Medium   \\
+                REQ8 & The simulation tool shall display in console status of queue after executing each job from each queue. Information like: unique number of job, create time, execution time, time in queue.  & Implemented & Low  \\
+                \hline
+                \end{tabular}
+            \caption{System feature 2: output information.}
+            \label{feature2}
+        \end{table}
+        
+        \subsubsection{System Feature 3: input information} 
+        \textbf{Description and priority}
+        
+        User shall insert information in console to interact with simulation tool. Priority level: Medium. \newline
+        \textbf{Stimulus/Response Sequences}
+        
+        All use cases and diagrams have been includes in chapter \ref{umlDiagrams}. \newline
+        \textbf{Functional requirements}   
+        \newline
+        \begin{table}[h!]
+            \begin{tabular}{|l|p{10cm}|p{3cm}|l|}
+                \hline
+                ID   & Description  & Status & Priority \\ \hline
+                REQ9 & User shall define the number of simulated computer user. & Implemented & Medium   \\
+                REQ10 & User shall define the user distribution in classes.  & Implemented & Medium   \\
+                REQ11 & User shall define the user budget.  & Implemented & Medium   \\
+                \hline
+                \end{tabular}
+            \caption{System feature 3: input information.}
+            \label{feature3}
+        \end{table}
+        \newline
+        
+        \newpage\
+        \subsubsection{System Feature 4: input information} 
+        \textbf{Description and priority}
+        
+        User shall insert information in the console or in the text file to interact with simulation tool. Priority level: Medium. \newline
+        \textbf{Stimulus/Response Sequences}
+        
+        All use cases and diagrams have been includes in chapter \ref{umlDiagrams}. \newline
+        \textbf{Functional requirements}   
+        \newline
+        \begin{table}[h!]
+            \begin{tabular}{|l|p{10cm}|p{3cm}|l|}
+                \hline
+                ID   & Description  & Status & Priority \\ \hline
+                REQ9 & User shall define the number of simulated computer user. & Implemented & Medium   \\
+                REQ10 & User shall define the user distribution in classes.  & Implemented & Medium   \\
+                REQ11 & User shall define the user budget.  & Implemented & Medium   \\
+                REQ12 & The simulator shall read the parameters from text file, which has been created by user. & Not implemented & Low \\
+                \hline
+                \end{tabular}
+            \caption{System feature 3: input information.}
+            \label{feature3}
+        \end{table}
+        \newline
+        
+        \newpage\
+        \subsubsection{System Feature 5: scheduler.} 
+        \textbf{Description and priority}
+        
+        Scheduler has some important functionalities concern jobs and queues. Priority level: High. \newline
+        \textbf{Stimulus/Response Sequences}
+        
+        All use cases and diagrams have been includes in chapter \ref{umlDiagrams}. \newline
+        \textbf{Functional requirements}   
+        \newline
+        
+        \begin{table}[h!]
+            \begin{tabular}{|l|p{10cm}|p{3cm}|l|}
+                \hline
+                ID   & Description  & Status & Priority \\ \hline
+                REQ12 & User shall define the number of simulated computer user. & Implemented & High   \\
+                REQ13 & User shall define the user distribution in classes.  & Implemented & High   \\
+                REQ14 & User shall define the user budget.  & Implemented & High   \\
+                REQ15 & The simulator shall read the parameters from text file, which has been created by user. & Not implemented & High \\
+                \hline
+                \end{tabular}
+            \caption{System feature 3: input information.}
+            \label{feature3}
+        \end{table}
+        \newline
+
+        The simulation tool shall match job request to resources.
+        The job queues shall be maintained by scheduler.
+        The scheduler shall decide about ordering of jobs.
+        The scheduler shall have interface.
+        The entire system shall not be real system for managing a supercomputer.
+       
             
-            \subsubsection{Non-functional} %Non-functional requirements
-            \qquad Non-functional requirements of system.
+        \subsection{Non-functional requirements} %Non-functional requirements
+        \qquad Non-functional requirements of system.
             \begin{enumerate}
                     \item The simulator shall be built using C++ programming language.
                     \item The code shall be compiled and executed on Crescent.
@@ -214,9 +335,11 @@
                     \item The cost per hour shall be constant.
                     \item The time between two successive job requests and the size of the request shall be modelled by an exponential probability distribution with parameters dependent on the class of user.
                 \end{enumerate}
+        \subsection{Additional information}
+        \qquad During implementation of code, some questions and doubts appeared. Not everything has been described in user requirements very clearly and interpretation can be different for each person. The first thing, which is not very understandable is: can be given type of nodes used for every type of job? Thus, some requirements have been added additionally, that any doubt does not exists.
                 
                 
-        \subsection{UML diagrams}
+        \subsection{UML diagrams} \label{umlDiagrams}
         \qquad The Unified Modeling Language (UML) is a modelling language using in software engineering to visualize the design of the given system \cite{uml}. It is helpful in communication in company organization and business processes. Version 2.0 of UML includes two main types of diagrams: structural and behavioural.
         Additionally, every type includes several individual and original diagrams. Division has been presented below (based on UML 2.0:in a nutshell \cite{uml}).
         \begin{enumerate}
@@ -260,13 +383,13 @@
         \subsection{Conclusion}    
     
     \newpage
-    \section{Implementation}
+    \section{Implementation} \label{Implementation}
         \subsection{General design}
         \subsection{Class diagram}
         \subsection{Conclusion}
     
     \newpage
-    \section{Software Testing and Quality Assurance}
+    \section{Software Testing and Quality Assurance} \label{STQA}
         \subsection{Test plan}
         \subsection{Low level unit tests}
         \subsection{Integration tests}
@@ -276,6 +399,12 @@
     
     \newpage
     \section{General conclusion}
+    \qquad about documentation
+    \qquad about code
+    \qquad about test
+    \qquad about my results, my simulator and scheduler
+    \newline
+    \qquad It is important to say that design of simulation tool, quality of code, tests and documentation is not always proper in this case. Complicated design of classes or requirements, which include issues, are sometimes the reason of not delivering each functionality in given time, issues in code and low quality of application. This project is the best exercise, which shows: how to create high quality software and how difficult is it.
     
     \newpage
     \begin{thebibliography}{9} 
@@ -314,6 +443,30 @@
          Boston [etc.]: Pearson, 2011.\newline
          Chapter 5, pages: 118-138
          
+         \bibitem{simulation} %about exponential distribution
+         Article from Research Gate website. \newline
+         Access date: 10/12/2018. \newline
+         \href{https://www.researchgate.net/publication/265811204_A_Critical_Simulation_of_CPU_Scheduling_Algorithm_using_Exponential_Distribution}{A Critical Simulation of CPU Scheduling Algorithm using Exponential Distribution.}
+         
+         \bibitem{exponential}
+         C++ website. \newline
+         Access date: 10/12/2018. \newline
+         \href{http://www.cplusplus.com/reference/random/exponential_distribution/}{Exponential_Distribution}
+         
+         \bibitem{unitTest}
+         Alexott.net \newline
+         Access date: 11/12/2018. \newline
+         \href{http://alexott.net/en/cpp/CppTestingIntro.html}{Test-driven development and unit testing with examples in C++}
+         
+         \bibitem{unitTestVisual}
+         Visual C++ Team Blog. \newline
+         Access date: 12/12/2018. \newline
+         \href{https://blogs.msdn.microsoft.com/vcblog/2017/04/19/cpp-testing-in-visual-studio/}{C++ Unit Testing in Visual Studio}
+         
+         \bibitem{unitTest2}
+         Simplify C++ website. \newline
+         Access date: 12/12/2018. \newline
+         \href{https://arne-mertz.de/2018/04/unit-testing-in-visual-studio/}{How to Perform Unit Testing Native C++ Code in Visual Studio}
          
 
          
@@ -359,6 +512,9 @@
         
         \section{Further operations for system}
         
+        \section{User Requirements} \label{UserRequirements}
+        \qquad User Requirements are in other PDF document: \href{https://bb.cranfield.ac.uk/bbcswebdav/pid-650285-dt-content-rid-1104916_2/courses/N-CST-STQA-18-A18/assign-2018-2019.pdf}{User Requirements.pdf} on Black Board page. Document is available only after login on this page.
+                
     \end{appendices}
 
 \end{document}
