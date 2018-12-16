@@ -61,7 +61,7 @@ namespace UnitTest1
 
 		TEST_METHOD(CreateJob)
 		{
-			int createTime = 0; //not every job has createTime 0! is it proper unit test?
+			int createTime = 0; //not every job has createTime = 0! Is it proper unit test?
 			Job job(Job::_small, createTime);
 			Assert::AreEqual(createTime, job.GetCreateTime());
 			

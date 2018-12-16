@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="SimulationTool" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="5.5" />
+    <AssociationLine Name="scheduler" Type="Scheduler" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="0.781" />
+        <Point X="15.938" Y="0.781" />
+        <Point X="15.938" Y="2.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAgACACAAAAAACAAAAAAAAAAACAQAFAgEAAAAAAAAA=</HashCode>
+      <FileName>SimulationTool.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="scheduler" />
+      <Field Name="users" />
+      <Field Name="system" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ComputingSystem" Collapsed="true">
+    <Position X="1.75" Y="2.5" Width="3.75" />
+    <AssociationLine Name="storage" Type="Storage">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.908" Y="0.377" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>YAgIGAAAAAAAAAAAAAiAAAAAAEABAEAgAAACAgAAACA=</HashCode>
+      <FileName>ComputingSystem.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="storage" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Nodes" Collapsed="true">
+    <Position X="1.25" Y="4" Width="2" />
+    <NestedTypes>
+      <Enum Name="Nodes::TypeOfNode" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Nodes.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAkAQAAAAAAAIAAEIBAAiAAAAABAAAAAACAAAIAAAA=</HashCode>
+      <FileName>Nodes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Processor" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Processor::TypeOfProcessor" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Processor.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAgAAAAAAAAAAAAAAAAAgBQAAAAAAAAAAEAgA=</HashCode>
+      <FileName>Processor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Storage" Collapsed="true">
+    <Position X="3.75" Y="4" Width="2" />
+    <NestedTypes>
+      <Enum Name="Storage::TypeOfStorage" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Storage.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAIAIAACAAAAAABgAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Storage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Users" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAgAABAAAIIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Student" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAAAQAAAAAAABAAAAAIgAAAAAAAAAAAAAAAAEgI=</HashCode>
+      <FileName>Student.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResearchGroup" Collapsed="true">
+    <Position X="9" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ResearchGroup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Staff" Collapsed="true">
+    <Position X="11.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAQAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Staff.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Course" Collapsed="true">
+    <Position X="6.5" Y="4" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="Course::TypeOfCourse" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Course.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIIAAEAAAAAAAEAAAIABAABAAAAAAAAAABCAEAAAAAA=</HashCode>
+      <FileName>Course.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Researcher" Collapsed="true">
+    <Position X="9" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Researcher.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITmember" Collapsed="true">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITmember.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InterfaceScheduler" Collapsed="true">
+    <Position X="13.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAABAAAAAAAoAAAAAAAAAIAAAAAAIAAAAA=</HashCode>
+      <FileName>InterfaceScheduler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scheduler" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAgRAACBAAkCAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scheduler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Queue" Collapsed="true">
+    <Position X="13.75" Y="4" Width="2" />
+    <NestedTypes>
+      <Enum Name="Queue::TypeOfJobQueue" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Queue.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAABAAAAAQAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Queue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Job" Collapsed="true">
+    <Position X="13.75" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Job::TypeOfJob" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Job.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAFgRQAMwgQASALAAAAAAAAADEAABCAAAAAAAAAA=</HashCode>
+      <FileName>Job.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

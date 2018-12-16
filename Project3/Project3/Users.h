@@ -6,6 +6,13 @@
 #include "ResearchGroup.h"
 #include "Staff.h"
 #include <vector>
+
+/**
+	Users class is responsible for simlation of users in supercomputer environment.
+	We can recognize different types of user: students in course, researcher in research group, IT member in staff.
+	Not all class of users have been implemented.
+**/
+
 class Users
 {
 public:

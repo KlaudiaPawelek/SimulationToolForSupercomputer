@@ -1,0 +1,43 @@
+﻿  ComputingSystem.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(24): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(25): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  Course.cpp
+  InterfaceScheduler.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(24): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(25): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+  ITmember.cpp
+  Job.cpp
+  main.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(24): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(25): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\main.cpp(43): warning C4101: 'exception': unreferenced local variable
+  Nodes.cpp
+  Processor.cpp
+  Queue.cpp
+  Researcher.cpp
+  ResearchGroup.cpp
+  Scheduler.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\scheduler.cpp(80): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  SimulationTool.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(24): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(25): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\simulationtool.cpp(128): warning C4244: '=': conversion from '_Ty' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+          and
+          [
+              _Ty=int
+          ]
+  Staff.cpp
+  Storage.cpp
+  Student.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\student.cpp(21): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Users.cpp
+  Generating code
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.cpp(49): warning C4715: 'ComputingSystem::GetAmountOfNodes': not all control paths return a value
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.cpp(39): warning C4715: 'ComputingSystem::GetNodes': not all control paths return a value
+  All 959 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Project3.vcxproj -> C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\Project3\x64\Release\Project3.exe

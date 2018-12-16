@@ -1,3 +1,7 @@
 ﻿  unittest1.cpp
-     Creating library C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\Project3\Debug\UnitTest1.lib and object C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\Project3\Debug\UnitTest1.exp
-  UnitTest1.vcxproj -> C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\Project3\Debug\UnitTest1.dll
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(51): error C2039: 'ifBusy': is not a member of 'Nodes'
+  c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\nodes.h(10): note: see declaration of 'Nodes'
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(51): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(52): error C2039: 'getId': is not a member of 'Nodes'
+  c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\nodes.h(10): note: see declaration of 'Nodes'
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(52): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments

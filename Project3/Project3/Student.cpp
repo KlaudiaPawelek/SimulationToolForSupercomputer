@@ -43,6 +43,6 @@ int Student::GetStudentId()
 
 void Student::SetStatusOfJob(Job &job, bool inQueue, bool isDone)
 {
-	job.inQueue = inQueue;
-	job.done = isDone;
+	job.SetJobInQueue(inQueue);
+	job.SetJobIsDone(isDone);
 }

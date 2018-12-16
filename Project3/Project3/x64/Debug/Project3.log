@@ -1,0 +1,21 @@
+﻿  InterfaceScheduler.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(57): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.h(61): warning C4244: 'initializing': conversion from 'double' to 'const int', possible loss of data
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(62): warning C4244: '=': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(64): warning C4244: '=': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(66): warning C4244: '=': conversion from 'int' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(70): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(71): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Project3.vcxproj -> C:\Users\klaud\Documents\GitExtnsion\SimulationToolForSupercomputer\Project3\x64\Debug\Project3.exe

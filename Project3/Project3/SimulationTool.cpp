@@ -1,13 +1,13 @@
- 
-#include "SimulationTool.h"
-int tmp = 0;
-int tmp2 = 0;
+﻿ #include "SimulationTool.h"
+int tmp = 0;	//initialize global variable
+int tmp2 = 0;	//initialize global variable
 
-
+// Default constructor
 SimulationTool::SimulationTool()
 {
 }
 
+// Constructor with parameters
 SimulationTool::SimulationTool(int amountOfUsers, int budget)
 {
 
@@ -16,16 +16,19 @@ SimulationTool::SimulationTool(int amountOfUsers, int budget)
 	this->scheduler = new Scheduler();
 }
 
+// Default empty destructor
 SimulationTool::~SimulationTool()
 {
 }
 
+// Run scheduler
 void SimulationTool::RunScheduler()
 {
 	(*this->scheduler).GetNewJobs((*this->users));
 	vector<Queue> *queue = (*this->scheduler).GetQueue();
 }
 
+// Match jobs to resources
 void SimulationTool::MatchJobToResources(int jobPerUser) //for small jobs
 {
 	vector<Nodes> *nodes = (*this->system).GetNodes(Nodes::traditional);
@@ -44,7 +47,7 @@ void SimulationTool::MatchJobToResources(int jobPerUser) //for small jobs
 					(*queue)[i].queue[j].SetResourceTime(_CLOCK_);
 					int jobID = (*queue)[i].queue[j].GetJobId();
 					AddResourceTime(jobID, jobPerUser, _CLOCK_);
-					(*nodes)[j].busy = true;
+					(*nodes)[j].SetBusy(true);
 					(*this->JobNodes).insert({ (*queue)[i].queue[j] , (*nodes)[j] });
 
 					tmp++;
@@ -59,7 +62,7 @@ void SimulationTool::MatchJobToResources(int jobPerUser) //for small jobs
 					(*queue)[i].queue[j].SetResourceTime(_CLOCK_);
 					int jobID = (*queue)[i].queue[j].GetJobId();
 					AddResourceTime(jobID, jobPerUser, _CLOCK_);
-					(*nodes)[j].busy = true;
+					(*nodes)[j].SetBusy(true);
 					(*this->JobNodes).insert({ (*queue)[i].queue[j] , (*nodes)[j] });
 
 					tmp++;
@@ -71,6 +74,7 @@ void SimulationTool::MatchJobToResources(int jobPerUser) //for small jobs
 	}
 }
 
+// Execute jobs
 void SimulationTool::ExecuteJobs(int jobPerUser)
 {
 	vector<Nodes> *nodes = (*this->system).GetNodes(Nodes::traditional);
@@ -84,14 +88,17 @@ void SimulationTool::ExecuteJobs(int jobPerUser)
 
 			for (int j = 0; j < (*this->system).GetAmountOfNodes(Nodes::traditional); j++)
 			{
+				//---ISSUE HAS BEEN FOUND DURING THE TESTING!------
+
 				//(*queue)[i].queue[tmp2].SetResourceTime(_CLOCK2_);
 				//int jobID = (*queue)[i].queue[tmp2].GetJobId();
 				//AddExecuteTime(jobID, jobPerUser, _CLOCK2_);
+				//-------------------------------------------------
+
 				int id = (*this->scheduler).DeleteJobFromQueue((*queue)[i], (*this->users));
 				AddExecuteTime(id, jobPerUser, _CLOCK2_);
-				(*nodes)[j].busy = false;
+				(*nodes)[j].SetBusy(false);
 				
-				// to do: change values in JobNodes multimap also ;-)
 				tmp2++;
 			}
 			
@@ -100,12 +107,13 @@ void SimulationTool::ExecuteJobs(int jobPerUser)
 	}
 }
 
+// Overridden operator< for vector
 bool operator<(const Job & left, const Job & right)
 {
 	return left.jobID < right.jobID;
 }
 
-
+// Exponential distribution: exponential_distribution engine and default_random_engine are used!
 vector<int> SimulationTool::ExponentialDistributionEngine(int maxJobs, int maxNodes, int jobPerUser)
 {
 	default_random_engine generator;
@@ -124,13 +132,13 @@ vector<int> SimulationTool::ExponentialDistributionEngine(int maxJobs, int maxNo
 	
 	for (int i = 1; i <jobPerUser+1; i++)
 	{
-		//cout<<(int)(p[i] * maxNodes / maxJobs);
 		p_short[i-1]= (p[jobPerUser + 1-i] * maxNodes / maxJobs);
 	}
 	
 	return p_short;
 }
 
+// Add resource time to each Student's Job object
 void SimulationTool::AddResourceTime(int jobID, int jobPerUser, int time)
 {
 	int id = jobID;
@@ -152,6 +160,7 @@ void SimulationTool::AddResourceTime(int jobID, int jobPerUser, int time)
 	}
 }
 
+// Add execute time to each Student's Job object
 void SimulationTool::AddExecuteTime(int jobID, int jobPerUser, int time)
 {
 	int id = jobID;

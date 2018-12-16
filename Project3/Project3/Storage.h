@@ -9,6 +9,7 @@ public:
 	};
 
 	TypeOfStorage type;
+private:
 	static const int size = 100;
 	static const int amount = 100;
 	int generalSize;

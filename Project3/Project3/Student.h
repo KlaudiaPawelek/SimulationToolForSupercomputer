@@ -8,11 +8,17 @@
 
 using namespace std;
 
+/**
+	Student class is responsible for create simulated Student.
+	Each Student can also create job.
+**/
+
 class Student
 {
 public:
-	int id;
 	vector<Job> *job = new vector<Job>;
+private:
+	int id;
 public:
 	Student();
 	Student(int id);

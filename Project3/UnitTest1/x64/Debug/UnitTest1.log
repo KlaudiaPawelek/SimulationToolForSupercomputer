@@ -1,0 +1,43 @@
+﻿  stdafx.cpp
+  ComputingSystem.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\computingsystem.cpp(50): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Course.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\course.cpp(49): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  InterfaceScheduler.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\interfacescheduler.cpp(58): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  ITmember.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\itmember.cpp(13): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Job.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\job.cpp(106): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  main.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\main.cpp(103): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Nodes.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\nodes.cpp(71): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Processor.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\processor.cpp(29): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Queue.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\queue.cpp(23): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Researcher.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\researcher.cpp(13): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  ResearchGroup.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\researchgroup.cpp(13): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Scheduler.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\scheduler.cpp(91): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  SimulationTool.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\simulationtool.cpp(177): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Staff.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\staff.cpp(13): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Storage.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\storage.cpp(23): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Student.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\student.cpp(49): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Users.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\users.cpp(20): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  unittest1.cpp
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(51): error C2039: 'ifBusy': is not a member of 'Nodes'
+  c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\nodes.h(10): note: see declaration of 'Nodes'
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(51): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(52): error C2039: 'getId': is not a member of 'Nodes'
+  c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\project3\nodes.h(10): note: see declaration of 'Nodes'
+c:\users\klaud\documents\gitextnsion\simulationtoolforsupercomputer\project3\unittest1\unittest1.cpp(52): error C2661: 'Microsoft::VisualStudio::CppUnitTestFramework::Assert::AreEqual': no overloaded function takes 1 arguments
+  Generating Code...

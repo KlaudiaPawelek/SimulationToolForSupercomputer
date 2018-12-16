@@ -1,10 +1,8 @@
- 
-#include "Storage.h"
+ #include "Storage.h"
 
 Storage::Storage()
 {
-	//this->type = TypeOfStorage::SSD;
-	//this->generalSize = this->size * this->amount;
+
 }
 
 Storage::Storage(TypeOfStorage type)

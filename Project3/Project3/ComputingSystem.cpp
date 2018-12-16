@@ -1,6 +1,6 @@
 #include "ComputingSystem.h"
 
-
+// Constructor, which containt vector of pointers to objects Nodes and Storage.
 ComputingSystem::ComputingSystem()
 {
 	this->storage = Storage(Storage::TypeOfStorage::SSD);
@@ -23,21 +23,25 @@ ComputingSystem::ComputingSystem()
 	}
 }
 
-
+// Default destructor.
 ComputingSystem::~ComputingSystem()
 {
 }
 
+// Return vector of pointer to objects Node of given type.
 vector<Nodes> *ComputingSystem::GetNodes(Nodes::TypeOfNode type)
 {
 	if (type == Nodes::traditional)
 		return nodesTraditional;
+
+	//nodes are not available yet
 	/*if (type == Nodes::accelerated)
 		return nodesAccelerated;
 	if (type == Nodes::specialized)
 		return nodesSpecialized;*/
 }
 
+// Return information about amount of each type of nodes.
 int ComputingSystem::GetAmountOfNodes(Nodes::TypeOfNode type)
 {
 	if (type == Nodes::TypeOfNode::traditional)
